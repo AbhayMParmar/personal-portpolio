@@ -6,7 +6,7 @@ Welcome to my **personal developer portfolio** — a fully responsive, visually 
 
 
 
-![Preview Screenshot](https://github.com/AbhayMParmar/Personal-Portfolio/blob/main/Personal%20Portfolio/img/pro4.png?raw=true)
+![Preview Screenshot](https://github.com/AbhayMParmar/personal-portpolio/blob/main/portfolio/img/pro4.png?raw=true)
 
 
 
