@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End developer | AbhayParmar</title>
+    <link rel="icon"
+        href="img/png-clipart-web-development-web-service-web-developer-digital-marketing-develop-trademark-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
+    <script src="script.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+    <div class="particle-system">
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="container">
+                <a href="#home" class="logo" data-text="AP">AP</a>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link" id="about-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#" class="btn btn-resume" id="resume-btn">Resume</a>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="container">
+                <div class="home-content">
+                    <div class="home-text scroll-reveal delay-1">
+                        <h4 class="subtitle letter-animate">Hello, I'm</h4>
+                        <h1 class="title glitch-text letter-animate" data-text="Abhay Parmar">Abhay Parmar</h1>
+                        <h2 class="profession letter-stagger letter-animate">Front-End Developer</h2>
+                        <p class="description">Building modern, responsive interfaces with a focus on performance,
+                            accessibility, and user engagement.</p>
+                        <div class="home-btns">
+                            <a href="#projects" class="btn btn-primary hover-grow">View My Work</a>
+                            <a href="#contact" class="btn btn-secondary hover-grow">Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="home-image">
+                        <div class="image-wrapper">
+                            <img src="img/crop1.png" alt="Alex Carter" class="profile-img">
+                            <div class="shape shape-1"></div>
+                            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-down">
+                    <a href="#about" class="scroll-link">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="word about-text letter-animate">About</span>
+                    <span class="word letter-animate">Me</span>
+                </h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="img/crop1.png" alt="About Alex">
+                    </div>
+                    <div class="about-text">
+                        <h3>Who am I?</h3>
+                        <br>
+                        <p>I'm a passionate detail-oriented Frontend Developer with strong expertise in building
+                            responsive, user-friendly web applications using HTML, CSS, JavaScript, Bootstrap and modern
+                            frameworks.</p>
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <h4>Name:</h4>
+                                    <p>raman gupta</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email:</h4>
+                                    <p>ramangupta359@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location:</h4>
+                                    <p>Gujarat,India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <h3 class="skills-title letter-animate">My <span class="letter-animate">Skills</span></h3>
+                            <div class="skills-container">
+                                <!-- Skill Categories -->
+                                <div class="skill-categories">
+                                    <div class="category-card" data-category="Language">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <h4>Language</h4>
+                                    </div>
+                                    <div class="category-card" data-category="backend">
+                                        <i class="fas fa-server"></i>
+                                        <h4>Backend</h4>
+                                    </div>
+                                    <div class="category-card" data-category="tools">
+                                        <i class="fas fa-tools"></i>
+                                        <h4>Tools</h4>
+                                    </div>
+                                </div>
+
+                                <!-- Skill Bars -->
+                                <div class="skill-bars">
+                                    <!-- Frontend Skills -->
+                                    <div class="skill-bar" data-category="Language">
+                                        <div class="skill-info">
+                                            <div class="skill-name">
+                                                <i class="fab fa-html5"></i>
+                                                <span>HTML5/CSS3</span>
+                                            </div>
+                                            <span class="skill-percent">95%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress html" style="width: 95%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-bar" data-category="Language">
+                                        <div class="skill-info">
+                                            <div class="skill-name">
+                                                <i class="fab fa-js"></i>
+                                                <span>JavaScript</span>
+                                            </div>
+                                            <span class="skill-percent">60%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress js" style="width: 60%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar" data-category="Language">
+                                        <div class="skill-info">
+                                            <div class="skill-name">
+                                                <i class="fas fa-code"></i>
+                                                <span>C</span>
+                                            </div>
+                                            <span class="skill-percent">80%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress js" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Backend Skills -->
+                                    <div class="skill-bar" data-category="backend">
+                                        <div class="skill-info">
+                                            <div class="skill-name">
+                                                <i class="fas fa-fire"></i>
+                                                <span>Firebase</span>
+                                            </div>
+                                            <span class="skill-percent">75%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress firebase" style="width: 75%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-bar" data-category="backend">
+                                        <div class="skill-info">
+                                            <div class="skill-name">
+                                                <i class="fas fa-database"></i>
+                                                <span>SQL</span>
+                                            </div>
+                                            <span class="skill-percent">60%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress Sql" style="width: 60%;"></div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Tools Skills -->
+                                    <div class="skill-bar" data-category="tools">
+                                        <div class="skill-info">
+                                            <div class="skill-name">
+                                                <i class="fab fa-git-alt"></i>
+                                                <span>Git/GitHub</span>
+                                            </div>
+                                            <span class="skill-percent">80%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress git" style="width: 80%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-bar" data-category="tools">
+                                        <div class="skill-info">
+                                            <div class="skill-name">
+                                                <i class="bi bi-bootstrap-fill"></i>
+                                                <span>Bootstrap</span>
+                                            </div>
+                                            <span class="skill-percent">85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress vscode" style="width: 85%;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-bar" data-category="tools">
+                                        <div class="skill-info">
+                                            <div class="skill-name">
+                                                <i class="fas fa-terminal"></i>
+                                                <span>Visual Studio Code</span>
+                                            </div>
+                                            <span class="skill-percent">90%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress vscode" style="width: 90%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="timeline">
+                    <h3 class="experience-title letter-animate">Education & Experience</h3>
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2025 - Present</div>
+                            <div class="timeline-content">
+                                <h4>Front-End Devloper Intern <br> (1 month)</h4>
+                                <p>Unified Mentor.</p>
+                                <p>Developed and maintained client websites, implemented responsive designs, and
+                                    optimized
+                                    performance.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023-2026</div>
+                            <div class="timeline-content">
+                                <h4>Bachelor of Computer Applications</h4>
+                                <p>BCA</p>
+                                <p> I’m passionate about problem-solving, always eager to learn new tools and
+                                    technologies, and looking forward to internships or real-world opportunities to
+                                    apply what I’ve learned.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="word section-title letter-animate">My <span
+                        class="word about-text letter-animate">Projects</span></h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/pro2.jpg" alt="Project 1">
+                            <div class="project-links">
+                                <a href="https://github.com/AbhayMParmar/Gym-Management-System" class="project-link"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="https://gym-management-system10.netlify.app/" class="project-link"><i
+                                        class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Gym-Management-System</h3>
+                            <p>The GYM Management System is a web-based application designed to modernize and streamline
+                                the
+                                operations of fitness centers.</p>
+                            <div class="project-tags">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/pro1.jpg" alt="Project 2">
+                            <div class="project-links">
+                                <a href="https://github.com/AbhayMParmar/Expense-Tracker" class="project-link"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="https://expensetracker40.netlify.app/" class="project-link"><i
+                                        class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Expense-Tracker Template</h3>
+                            <p>A web-based Expense Tracker built with HTML, CSS, and JavaScript.</p>
+                            <div class="project-tags">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/pro4.png" alt="Project 3">
+                            <div class="project-links">
+                                <a href="https://github.com/AbhayMParmar/Personal-portfolio" class="project-link"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="https://personalportfolio3432.netlify.app/" class="project-link"><i
+                                        class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3> Personal Portfolio Website</h3>
+                            <p>This Personal Portfolio Website is a modern, fully responsive, and interactive
+                                single-page application designed to showcase my work as a Front-End Developer.</p>
+                            <div class="project-tags">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/pro3.png" alt="Project 4">
+                            <div class="project-links">
+                                <a href="https://github.com/AbhayMParmar/Ecommerce-Website" class="project-link"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="https://codewith10.netlify.app/" class="project-link"><i
+                                        class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Ecommerce-Website Template</h3>
+                            <p>A web-based Ecommerce-Website built with HTML, CSS.</p>
+                            <div class="project-tags">
+                                <span>HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/pro5.png" alt="Project 5">
+                            <div class="project-links">
+                                <a href="https://github.com/AbhayMParmar/Netflixclone" class="project-link"><i
+                                        class="fas fa-link"></i></a>
+                                <a href="https://netflixclone-theta-roan.vercel.app/" class="project-link"><i
+                                        class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Netflix Clone</h3>
+                            <p>This project is a Netflix-style landing page and user system clone built using HTML, CSS
+                                (including Bootstrap), and JavaScript. </p>
+                            <div class="project-tags">
+                                <span>HTML/CSS</span>
+                                <span>Javascript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more">
+                    <a href="#" class="btn btn-primary">View More Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <!-- Animated line with hover effect -->
+                <div class="animated-line">
+                    <div class="line"></div>
+                    <div class="hover-effect"></div>
+                </div>
+                <h2 class="section-title word letter-animate">Get In <span
+                        class="word about-text letter-animate">Touch</span></h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Talk About Your Project</h3>
+                        <p>Feel free to reach out if you're looking for a developer, have a question, or just want to
+                            connect.</p>
+                        <br>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:abhayparmar359@gmail.com">ramangupta359@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Gujarat,India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" placeholder="Subject" required>
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <!-- Animated line with hover effect -->
+                <div class="animated-line">
+                    <div class="line"></div>
+                    <div class="hover-effect"></div>
+                </div>
+
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="#home" class="logo">AP</a>
+                        <p>Web Developer & Designer</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Consulting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to my newsletter for the latest updates.</p>
+                        <form id="newsletterForm">
+                            <input type="email" id="newsletterEmail" placeholder="Your Email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Alex Carter. All Rights Reserved.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <a href="#home" class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <!-- Project Modal -->
+        <div class="project-modal" id="projectModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <!-- Content will be inserted here via JavaScript -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Resume Request Modal -->
+        <div class="modal" id="resumeModal">
+            <div class="content">
+                <span class="close-modal">&times;</span>
+                <h3>Request My Resume</h3>
+                <br>
+                <form id="resumeForm">
+                    <div class="form-group">
+                        <input type="email" id="resumeEmail" placeholder="Your Email (optional)">
+                        <label for="resumeEmail">Email (optional)</label>
+                    </div>
+                    <p class="small-text">Providing your email helps me follow up with you.</p>
+                    <button type="submit" class="btn btn-primary">Download Resume</button>
+                </form>
+            </div>
+        </div>
+        <!-- Custom Cursor -->
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
+</body>
+
+</html>
