@@ -60,4 +60,4 @@ This portfolio uses Firebase services to:
 
 ## 🖼️ Live Demo
 
-🔗 [View Live Portfolio](https://personalportfolio3432.netlify.app/)
+🔗 [View Live Portfolio](https://polite-sable-beeb06.netlify.app/)
